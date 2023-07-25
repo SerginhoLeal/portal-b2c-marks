@@ -21,26 +21,6 @@
   - npx prisma studio
 
 ## Google Auth
-  Após publicar o uso do serviço, vá em credentials e siga esse passo
-  Criar Credenciais > ID do cliente OAuth
-
-## Rule
-  primeiro tenho que fazer o cadastro normal para depois realizar o cadastro com a google.
-
-## Branch
-Main
-|\
-| \
-|  homolog
-|  |\
-|  | feature-1
-|  |/
-|  |
-|  |\
-|  | feature-2
-|  |/
-| /
-|/
-
+  Creating a documentation in Notion.
 
 ## Deploy

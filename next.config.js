@@ -7,6 +7,20 @@ const nextConfig = {
     'api.ts',
     'api.tsx'
   ],
+  images: {
+    domains: [
+      'res.cloudinary.com',
+      'files.stripe.com'
+    ],
+  },
+  webpack(config, options) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack', 'url-loader'],
+    });
+
+    return config;
+},
 }
 
 module.exports = nextConfig

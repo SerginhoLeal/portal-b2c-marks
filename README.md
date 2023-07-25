@@ -1,39 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portal-B2C-Marks
+  - link: [url-portal](https://portal-b2c-marks.vercel.app/)
 
-## Getting Started
+## Figma
+  - link: [figma](https://www.figma.com/file/CDL5uzDyjshTSSiyxlsva8/Mark's-Joias?type=design&node-id=112%3A206&mode=design&t=s4srcPDI11x6VCs7-1)
 
-First, run the development server:
+## Prisma
+  Prisma command line interface installation command:
+  - yarn add prisma --dev
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+  Installation command for the dependency that we will use in our application:
+  - npm i @prisma/client
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  Command to start Prisma:
+  - npx prisma init --datasource-provider SQLite
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+  Command to run the migration:
+  - npx prisma migrate dev
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+  Command to run Prisma Studio:
+  - npx prisma studio
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Google Auth
+  Após publicar o uso do serviço, vá em credentials e siga esse passo
+  Criar Credenciais > ID do cliente OAuth
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Rule
+  primeiro tenho que fazer o cadastro normal para depois realizar o cadastro com a google.
 
-## Learn More
+## Branch
+Main
+|\
+| \
+|  homolog
+|  |\
+|  | feature-1
+|  |/
+|  |
+|  |\
+|  | feature-2
+|  |/
+| /
+|/
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# portal-b2c-marks
+## Deploy

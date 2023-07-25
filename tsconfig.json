@@ -18,6 +18,8 @@
       "@/*": ["./src/*"],
       "@utils": ["./src/utils"],
       "@common": ["./src/common"],
+      "@context": ["./src/context"],
+      "@svg": ["./src/assets/svg"],
       "@services": ["./src/services"],
     }
   },

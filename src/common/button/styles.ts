@@ -1,11 +1,7 @@
 import styled, { css } from 'styled-components';
+import { ButtonProps } from './types';
 
-interface Props {
-  width?: number;
-  reverse?: boolean;
-};
-
-export const Container = styled.button<Props>`
+export const Container = styled.button<ButtonProps>`
   border: 0;
 
   margin: 5px 0;
@@ -13,13 +9,13 @@ export const Container = styled.button<Props>`
   height: 50px;
 
   border-radius: 2px;
-  border: 1px solid #395FF5;
+  
+  ${({ theme, width = 100, buttonStyles }) => css`
+    width: ${width}%;
 
-  ${({ theme, reverse, width }) => css`
-    width: ${width ? width : 100}%;
-    background-color: ${reverse ? theme.colors.white : theme.colors.button_default};
+    border: 1px solid ${theme.colors[buttonStyles.borderColor]};
+    background-color: ${theme.colors[buttonStyles.backgroundColor]};
   `};
 
   cursor: pointer;
 `;
-// background-color: ${reverse ? '#FFFFFF' : '#47C747'};

@@ -12,17 +12,17 @@ export const Filter: React.FC<PropsFilter> = ({ data = [] }: PropsFilter) => {
   const [checks, setChecks] = React.useState<string[]>([]);
 
   if(data.length === 0){
-    return <Skeleton quantity={5} width={100} height={8} />
+    return <Skeleton quantity={5} width={300} height={40} />
   };
 
-  return data.map(items => (
-    <Styles.Container>
+  return data.map((items, index) => (
+    <Styles.Container key={index.toString()}>
       <Styles.Title open={open} onClick={() => setOpen(!open)}>
-        <Text fontsize='medium' fontWeight='large' color='secondary'>{items.title}</Text>
-        <ArrowDown />
+        <Text fontSize='medium' fontWeight='semi_bold'>{items.title}</Text>
+        <ArrowDown width={15} height={15}/>
       </Styles.Title>
       {items.options.map((subItems, index) => (
-        <Styles.Options open={open} onClick={() => setChecks([subItems.product])}>
+        <Styles.Options key={index.toString()} open={open} onClick={() => setChecks([subItems.product])}>
           <CheckBox items={subItems} index={index} checks={checks} />
         </Styles.Options>
       ))}
@@ -36,7 +36,7 @@ const CheckBox = ({ items, index, checks }: any) => {
     <Styles.CheckBox key={index.toString()}>
       <Styles.Check />
       &nbsp;
-      <Text fontWeight='small' fontsize='small'>{items.product}</Text>
+      <Text fontWeight='normal' fontSize='small'>{items.product}</Text>
     </Styles.CheckBox>
   )
 };

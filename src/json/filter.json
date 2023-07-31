@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Aneis",
+    "options": [
+      { "product": "Coco", "stock": true },
+      { "product": "Gota", "stock": true },
+      { "product": "Praia", "stock": true },
+      { "product": "Namoro", "stock": true },
+      { "product": "Noivado", "stock": false },
+      { "product": "Aliança", "stock": false },
+      { "product": "Falange", "stock": false },
+      { "product": "Foleado", "stock": false },
+      { "product": "Amizade", "stock": false },
+      { "product": "Aparador", "stock": false },
+      { "product": "Claddagh", "stock": false },
+      { "product": "Masculino", "stock": false },
+      { "product": "Com Pedra", "stock": false },
+      { "product": "Religioso", "stock": false },
+      { "product": "Formatura", "stock": true },
+      { "product": "Regulável", "stock": true },
+      { "product": "Solitário", "stock": true },
+      { "product": "Geométrico", "stock": false },
+      { "product": "Compromisso", "stock": false },
+      { "product": "Chuveirinho", "stock": false },
+      { "product": "Debutante/Coroa", "stock": false }
+    ]
+  }
+]

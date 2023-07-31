@@ -27,7 +27,7 @@ export const Title = styled.button<PropsOpen>`
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 10px;
+  padding: 0 10px 0 20px;
 
   width: 100%;
   min-height: 40px;
@@ -37,7 +37,6 @@ export const Title = styled.button<PropsOpen>`
   border-radius: 2px;
 
   svg {
-    width: 15px;
     transition: .3s;
     ${({ open = false }) => open === true ? `transform:rotate(180deg)` : 'transform:rotate(0deg)'};
   };
@@ -66,7 +65,6 @@ export const Options = styled.div<PropsOpen>`
 
 export const CheckBox = styled.div`
   display: flex;
-
   margin-left: 10px;
   /* margin-bottom: 5px; */
 

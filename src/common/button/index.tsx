@@ -11,7 +11,11 @@ export const Button: React.FC<ButtonProps> = ({
     backgroundColor: 'default',
     borderColor: 'default'
   },
-  textStyles,
+  textStyles = {
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    textColor: 'default'
+  },
 
   text,
   onClick,

@@ -34,7 +34,6 @@
     "@types/cookie": "^0.5.1",
     "@types/styled-components": "^5.1.26",
     "babel-plugin-inline-react-svg": "^2.0.2",
-    "prisma": "^5.0.0",
     "react-native-svg-transformer": "^1.1.0",
     "url-loader": "^4.1.1"
   }

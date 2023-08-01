@@ -20,14 +20,14 @@ interface MainContextProviderProps {
 const MainContext = createContext({} as MainContextProviderProps);
 
 export const MainContextProvider = ({ children }: ChildrenProps) => {
-  const [filter, setFilter] = React.useState<FilterProduct[]>();
+  const [filter, setFilter] = React.useState<FilterProduct[]>([]);
 
-  React.useEffect(() => {
-    (() => {
-      api.get('/filter')
-        .then(response => setFilter(response.data))
-    })();
-  }, []);
+  // React.useEffect(() => {
+  //   (() => {
+  //     api.get('/filter')
+  //       .then(response => setFilter(response.data))
+  //   })();
+  // }, []);
 
   const value = {
     test: 'context test',

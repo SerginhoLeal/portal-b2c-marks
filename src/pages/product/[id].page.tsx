@@ -1,6 +1,7 @@
 import React from 'react';
 import Stripe from 'stripe';
 import Head from 'next/head';
+import { useRouter } from 'next/router'
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { Footer, Header, Images, Info } from '@common';
@@ -14,9 +15,11 @@ interface Props {
 };
 
 export default function Product({ product }: Props) {
+  const { isFallback } = useRouter();
+
   const [isCheckout, setIsCheckout] = React.useState(false);
 
-  if(!product){
+  if(isFallback){
     return <p>loading...</p>
   };
 
@@ -50,14 +53,11 @@ export default function Product({ product }: Props) {
         <link rel="icon" href="/logo.svg" />
       </Head>
 
-      <Header />
 
       <Styles.Container>
         <Images product={product} />
         <Info product={product} BuyNow={handleBuyProduct} />
       </Styles.Container>
-
-      <Footer />
 
     </React.Fragment>
   )
@@ -66,7 +66,7 @@ export default function Product({ product }: Props) {
 export const getStaticPaths: GetStaticPaths = async() => {
   return {
     paths: [],
-    fallback: false,
+    fallback: true,
   }
 };
 

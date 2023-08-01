@@ -8,10 +8,11 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Banner, Button, Products, Filter, Footer, Header, Input, Paginate } from '@common';
 import { useMainContext } from '@context';
 import { api } from '@services';
+import { DataProps } from '@/interfaces';
 
 import * as Styles from './styles';
 
-export default function Home({ filter }){
+export default function Home({ filter }: DataProps){
   const [products, setProducts] = React.useState<any[]>([]);
 
   const { register } = useForm<any>();

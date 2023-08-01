@@ -32,7 +32,6 @@ export interface ProductObject {
 };
 
 interface DataProps {
-  products: ProductObject[];
   filter: {
     title: string;
     options: {

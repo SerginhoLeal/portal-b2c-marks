@@ -21,6 +21,7 @@
       "@context": ["./src/context"],
       "@svg": ["./src/assets/svg"],
       "@services": ["./src/services"],
+      "@interfaces": ["./src/interfaces"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

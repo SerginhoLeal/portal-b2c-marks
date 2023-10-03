@@ -25,7 +25,10 @@ interface Data {
 export interface ProductObject {
   id: string;
   name: string;
-  image: string;
+  files: {
+    name: string;
+    file: string;
+  }[];
   price: string;
   description: string;
   defaultPriceId: string;
@@ -39,9 +42,15 @@ interface DataProps {
       stock: boolean;
     }[];
   }[];
+  products: ProductObject[]
+};
+
+export interface DataInitProps {
+  recently: ProductObject[];
+  best_seller: ProductObject[];
 };
 
 export type {
   Data,
-  DataProps
+  DataProps,
 };

@@ -1,3 +1,4 @@
+import { Skeleton } from "@common";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -11,26 +12,21 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.div`
-  /* display: flex; */
-
-  /* justify-content: center; */
-  align-items: center;
-
-  /* background-color: #000; */
-  min-height: 463px;
+  width: 500px;
+  height: 500px;
 
   video {
     width: 500px;
-    border: .5px solid #dedede;
+    /* border: .5px solid #dedede; */
     border-radius: 2px;
-    /* margin: 5px; */
   };
 
   img {
     width: 500px;
-    border: .5px solid #dedede;
+    height: 500px;
+    /* border: .5px solid #dedede; */
     border-radius: 2px;
-    /* margin: 5px; */
+    object-fit: contain;
   };
 `;
 
@@ -49,4 +45,8 @@ export const Other = styled.div`
     border-radius: 2px;
     margin: 0 5px 5px 0;
   }
+`;
+
+export const SkeletonStyle = styled(Skeleton)`
+  margin: 0px 5px 5px 0;
 `;

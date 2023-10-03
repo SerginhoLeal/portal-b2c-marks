@@ -17,26 +17,25 @@ export const Filter: React.FC<PropsFilter> = ({ data = [] }: PropsFilter) => {
 
   return data.map((items, index) => (
     <Styles.Container key={index.toString()}>
-      <Styles.Title open={open} onClick={() => setOpen(!open)}>
+      <Styles.Button open={open} onClick={() => setOpen(!open)}>
         <Text fontSize='medium' fontWeight='semi_bold'>{items.title}</Text>
         <ArrowDown width={15} height={15}/>
-      </Styles.Title>
-      {items.options.map((subItems, index) => (
-        <Styles.Options key={index.toString()} open={open} onClick={() => setChecks([subItems.product])}>
-          <CheckBox items={subItems} index={index} checks={checks} />
-        </Styles.Options>
-      ))}
+      </Styles.Button>
+      <Styles.Content>
+        {items.options.map((subItems, index) => {
+          const test = subItems.product === 'Coco';
+
+          return (
+            <Styles.Options key={index.toString()} checked={test} onClick={() => setChecks([subItems.product])}>
+              <Text
+                color={test ? 'white' : 'text'}
+                fontWeight={test ? 'semi_bold' : 'normal'}
+                fontSize='small'
+              >{subItems.product}</Text>
+            </Styles.Options>
+          )
+        })}
+      </Styles.Content>
     </Styles.Container>
   ))
-}
-
-const CheckBox = ({ items, index, checks }: any) => {
-  // const isCheck = checks.includes(items.product)
-  return (
-    <Styles.CheckBox key={index.toString()}>
-      <Styles.Check />
-      &nbsp;
-      <Text fontWeight='normal' fontSize='small'>{items.product}</Text>
-    </Styles.CheckBox>
-  )
 };

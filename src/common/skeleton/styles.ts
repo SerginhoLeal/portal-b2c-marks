@@ -11,7 +11,7 @@ export const Container = styled.div<Props>`
     height: ${height}px;
   `};
 
-  margin: 5px 0;
+  /* margin: 5px 0; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 
   background: #eee;

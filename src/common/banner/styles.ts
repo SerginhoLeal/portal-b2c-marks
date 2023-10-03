@@ -16,5 +16,5 @@ export const Banner = styled.div`
   width: 100%;
   height: 70vh;
 
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
 `;

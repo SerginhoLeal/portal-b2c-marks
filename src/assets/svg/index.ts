@@ -13,6 +13,7 @@ import { ReactComponent as Qrcode } from './Qrcode.svg';
 import { ReactComponent as ArrowDown } from './ArrowDown.svg';
 import { ReactComponent as SearchNormal } from './SearchNormal.svg';
 import { ReactComponent as Google } from './Google.svg';
+import { ReactComponent as Filter } from './Filter.svg';
 
 export {
   MasterCard,
@@ -29,5 +30,6 @@ export {
   Qrcode,
   ArrowDown,
   SearchNormal,
-  Google
+  Google,
+  Filter
 };

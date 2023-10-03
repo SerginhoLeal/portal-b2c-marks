@@ -28,9 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <Styles.Container type={type} disabled={disabled} buttonStyles={buttonStyles} onClick={onClick} {...rest}>
       <Text
-        color={textStyles?.textColor}
-        fontStyle={textStyles?.fontStyle}
-        fontWeight={textStyles?.fontWeight}
+        color={textStyles.textColor} fontStyle={textStyles.fontStyle} fontWeight={textStyles.fontWeight}
       >{text}</Text>
     </Styles.Container>
   );

@@ -1,0 +1,15 @@
+{
+  "files.exclude": {
+    ".next": true,
+    ".babelrc": true,
+    ".editorconfig": true,
+    ".eslintrc.json": true,
+    ".env.local": true,
+    ".gitignore": true,
+    "public": true,
+    "next.config.js": true,
+    "next-env.d.ts": true,
+    "tsconfig.json": true,
+    "trash.md": true
+  }
+}

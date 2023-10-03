@@ -9,7 +9,7 @@ interface Props {
   register: any;
   errors?: any;
   placeholder: string;
-  // icon: any;
+  icon(): JSX.Element;
   // type: 'search' | 'cep';
 };
 
@@ -17,15 +17,20 @@ const Input: React.FC<Props> = ({
   name,
   errors,
   register,
+  icon: Icon,
   placeholder = 'text',
 }: Props) => {
   return (
     <>
       <Styles.Container>
+        <Styles.Svg>
+          <Icon />
+          <span></span>
+        </Styles.Svg>
         <Styles.InputStyles
           type={name}
           placeholder={placeholder}
-          {...register(name, { require: true })}
+          // {...register(name, { require: true })}
         />
       </Styles.Container>
       {errors?.message && <p>{errors.message}</p>}

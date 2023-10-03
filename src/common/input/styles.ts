@@ -5,7 +5,7 @@ export const Container = styled.div`
 
   align-items: center;
 
-  flex-direction: column;
+  /* flex-direction: column; */
 
   min-height: 50px;
 
@@ -14,10 +14,24 @@ export const Container = styled.div`
   max-width: 400px;
 
   margin: 5px 0;
+`;
 
-  svg {
-    width: 60px;
-    ${({ type }: any) => type !== 'search' && 'border-right: 1px solid #DEDEDE'};
+export const Svg = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  span {
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: 15px;
+
+    background-color: #dedede;
   }
 `;
 

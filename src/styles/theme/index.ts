@@ -1,6 +1,7 @@
 export const colors = {
   default: '#FFFFFF',
 
+  primary: '#FA0B5B',
   secondary: '#395FF5',
   thirty: '#888888',
 
@@ -9,7 +10,9 @@ export const colors = {
   success: '#47C747',
 
   white: '#fff',
-  black: '#000'
+  black: '#000',
+
+
 };
 
 export const fontStyle = {

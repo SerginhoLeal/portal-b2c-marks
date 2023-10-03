@@ -1,9 +1,10 @@
 import '@/styles/globals.css'
+import { useEffect } from 'react';
 
 import type { AppProps } from 'next/app'
 import App from 'next/app';
 
-import { SessionProvider } from 'next-auth/react'
+// import { SessionProvider } from 'next-auth/react'
 
 import { ThemeProvider } from 'styled-components'
 
@@ -15,8 +16,16 @@ import { Footer, Header } from '@/common';
 // next auth
 
 function Main({ Component, pageProps: { session, ...pageProps }}: AppProps) {
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //           const loader = document.getElementById('globalLoader');
+  //       if (loader)
+  //           loader.style.display = 'none';
+  //   }
+  // }, []);
+
   return (
-    <SessionProvider session={session}>
+    // <SessionProvider session={session}>
       <MainContextProvider>
         <ThemeProvider theme={theme}>
           <Header />
@@ -24,7 +33,7 @@ function Main({ Component, pageProps: { session, ...pageProps }}: AppProps) {
           <Footer />
         </ThemeProvider>
       </MainContextProvider>
-    </SessionProvider>
+    // </SessionProvider>
   )
 }
 

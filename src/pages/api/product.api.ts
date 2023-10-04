@@ -5,13 +5,12 @@ import Stripe from "stripe";
 import { stripe, prisma } from "@services";
 
 export default async(request: NextApiRequest, response: NextApiResponse) => {
-  const {product_id} = request.body;
-  console.log("product_id: ", product_id);
+  const { product_id } = request.query;
   
-  if(request.method === 'POST'){
+  if(request.method === 'GET'){
     const res = await prisma.product.findMany({
       where: {
-        id: product_id
+        id: `${product_id}`
       },
       include: {
         files: {

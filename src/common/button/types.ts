@@ -19,6 +19,7 @@ interface ButtonProps extends Props {
 
   onClick?: () => void;
   type?: any;
+  loading?: boolean;
   disabled?: boolean;
 };
 

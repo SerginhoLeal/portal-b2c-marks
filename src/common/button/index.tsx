@@ -21,15 +21,22 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
 
   type,
+  loading,
   disabled,
 
   ...rest
 }: ButtonProps) => {
   return (
     <Styles.Container type={type} disabled={disabled} buttonStyles={buttonStyles} onClick={onClick} {...rest}>
-      <Text
-        color={textStyles.textColor} fontStyle={textStyles.fontStyle} fontWeight={textStyles.fontWeight}
-      >{text}</Text>
+      {loading ?
+        <Text
+          color={textStyles.textColor} fontStyle={textStyles.fontStyle} fontWeight={textStyles.fontWeight}
+        >loading...</Text>
+      : 
+        <Text
+          color={textStyles.textColor} fontStyle={textStyles.fontStyle} fontWeight={textStyles.fontWeight}
+        >{text}</Text>
+      }
     </Styles.Container>
   );
 };

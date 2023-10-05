@@ -18,7 +18,7 @@ const Product: React.FC<Props> = ({ data }: Props) => {
     <Styles.Container key={product.id} href={`/product/${product.id}`}>
 
       <Image
-        src={product.files[0]?.file}
+        src={product.thumbnail}
         width="300"
         height="300"
         alt={product.name}
@@ -29,7 +29,7 @@ const Product: React.FC<Props> = ({ data }: Props) => {
       />
 
       <Styles.Info>
-        <Text fontStyle='italic' fontSize='xsmall' color='white'>{product.files[0].name}</Text>
+        <Text fontStyle='italic' fontSize='xsmall' color='white'>{product.name}</Text>
         <Text fontStyle='italic' fontWeight='semi_bold' color='white'>{product.price}</Text>
       </Styles.Info>
 

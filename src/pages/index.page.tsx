@@ -31,11 +31,11 @@ export default function Init({ recently, best_seller }: DataInitProps){
         </Styles.TagName>
 
         <Styles.Products>
-          {best_seller.map((product) => (
+          {best_seller.map(product => (
             <Styles.Product key={product.id} href={`/product/${product.id}`}>
-
+    
               <Image
-                src={product.files[0]?.file}
+                src={product.thumbnail}
                 width="300"
                 height="300"
                 alt={product.name}
@@ -46,7 +46,7 @@ export default function Init({ recently, best_seller }: DataInitProps){
               />
 
               <footer>
-                <Text fontStyle='italic' fontSize='xsmall' color='white'>{product.files[0]?.name}</Text>
+                <Text fontStyle='italic' fontSize='xsmall' color='white'>{product.name}</Text>
                 <Text fontStyle='italic' fontWeight='semi_bold' color='white'>{product.price}</Text>
               </footer>
         
@@ -65,11 +65,11 @@ export default function Init({ recently, best_seller }: DataInitProps){
         </Styles.TagName>
 
         <Styles.Products>
-          {recently.map((product) => (
+          {recently.map(product => (
             <Styles.Product key={product.id} href={`/product/${product.id}`}>
 
               <Image
-                src={product.files[0]?.file}
+                src={product.thumbnail}
                 width="300"
                 height="300"
                 alt={product.name}
@@ -80,7 +80,7 @@ export default function Init({ recently, best_seller }: DataInitProps){
               />
 
               <footer>
-                <Text fontStyle='italic' fontSize='xsmall' color='white'>{product.files[0]?.name}</Text>
+                <Text fontStyle='italic' fontSize='xsmall' color='white'>{product.name}</Text>
                 <Text fontStyle='italic' fontWeight='semi_bold' color='white'>{product.price}</Text>
               </footer>
         
